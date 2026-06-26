@@ -1,4 +1,4 @@
-package ar.edu.unahur.obj2.banco;
+package ar.edu.unahur.obj2.ciber;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world");

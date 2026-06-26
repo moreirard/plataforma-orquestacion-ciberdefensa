@@ -1,3 +1,3 @@
-package ar.edu.unahur.obj2.banco;
+package ar.edu.unahur.obj2.ciber;
 public class MainTest {
 }
