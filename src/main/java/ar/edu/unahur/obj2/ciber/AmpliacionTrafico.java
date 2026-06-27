@@ -3,22 +3,23 @@ package ar.edu.unahur.obj2.ciber;
 /**
  * AmpliacionTrafico
  */
-public class AmpliacionTrafico {
+public class AmpliacionTrafico implements IAccionConfiguracion {
 
-    private NodoRed nodo;
+    private NodoRed receptor;
     private Integer caudal;
 
-    public AmpliacionTrafico(NodoRed nodo, Integer caudal) {
-        this.nodo = nodo;
+    public AmpliacionTrafico(NodoRed receptor, Integer caudal) {
+        this.receptor = receptor;
         this.caudal = caudal;
     }
 
+    @Override
     public void ejecutar() {
-        this.nodo.ampliarCapacidad(caudal);
+        receptor.ampliarCapacidad(caudal);
     }
 
+    @Override
     public void deshacer() {
-        this.nodo.restringirCapacidad(caudal);
+        receptor.restringirCapacidad(caudal); // La inversa
     }
-
 }
