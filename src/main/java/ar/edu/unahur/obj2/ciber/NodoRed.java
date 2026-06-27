@@ -17,11 +17,11 @@ public class NodoRed {
         return capacidadActual;
     }
 
-    public void ampliarCapacidad(int caudal) {
+    public void ampliarCapacidad(Integer caudal) {
         this.capacidadActual += caudal;
     }
 
-    public void restringirCapacidad(int caudal) {
+    public void restringirCapacidad(Integer caudal) {
         this.capacidadActual -= caudal;
     }
 
