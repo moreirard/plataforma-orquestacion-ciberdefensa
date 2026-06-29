@@ -11,12 +11,8 @@ public class OrquestadorAcciones {
     private List<IAccionConfiguracion> accionesPendientes = new ArrayList<>();
 
     // Sigue refactorizar para no sobrecargar el método y usar IAccionConfiguracion
-    public void registrarAccion(AmpliacionTrafico ampliacionTrafico) {
-        this.accionesPendientes.add(ampliacionTrafico);
-    }
-
-    public void registrarAccion(RestriccionTrafico restriccionTrafico) {
-        this.accionesPendientes.add(restriccionTrafico);
+    public void registrarAccion(IAccionConfiguracion accion) {
+        this.accionesPendientes.add(accion);
     }
 
     public void ejecutarPendientes() {
