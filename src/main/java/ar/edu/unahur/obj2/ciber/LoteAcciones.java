@@ -32,5 +32,4 @@ public class LoteAcciones implements IAccionConfiguracion{
         }
     }
 
-
 }
