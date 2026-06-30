@@ -27,6 +27,11 @@ public class NodoRed {
     }
 
     public void restringirCapacidad(Integer caudal) {
+        // Validación de Reglas de Negocio (Fail Fast)
+        if (this.capacidadActual - caudal < -50000) {
+            throw new RuntimeException("Límite absoluto de sobrecarga excedido");
+        }
+
         this.capacidadActual -= caudal;
         notificarObservadores();
     }
